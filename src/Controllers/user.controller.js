@@ -162,7 +162,7 @@ const loginUser = asyncHandler(async (req, res) =>{
     )
 
 })
-
+//pehle user ka id find krena padega uske baad refresh token ko unset krna padega tab suer logout hoga
 const logoutUser = asyncHandler(async(req, res) => {
     await User.findByIdAndUpdate(
         req.user._id,
