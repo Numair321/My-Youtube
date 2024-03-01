@@ -281,7 +281,6 @@ const updateAccountDetails = asyncHandler(async(req, res) => {
                 fullName,
                 email: email
             }
-        
         },
         {new: true}
         
@@ -365,7 +364,9 @@ const getUserChannelProfile = asyncHandler(async(req, res) => {
     if (!username?.trim()) {
         throw new ApiError(400, "username is missing")
     }
-
+   //agregation pine line implement aggregation pipeline is process of statge process 
+   //data base always put in other contenet show that we alaways use await before excute the functio
+   
     const channel = await User.aggregate([
         {
             $match: {
