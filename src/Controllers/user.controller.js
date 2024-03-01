@@ -281,6 +281,7 @@ const updateAccountDetails = asyncHandler(async(req, res) => {
                 fullName,
                 email: email
             }
+        
         },
         {new: true}
         
