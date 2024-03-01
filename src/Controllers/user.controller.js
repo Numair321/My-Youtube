@@ -366,7 +366,7 @@ const getUserChannelProfile = asyncHandler(async(req, res) => {
     }
    //agregation pine line implement aggregation pipeline is process of statge process 
    //data base always put in other contenet show that we alaways use await before excute the functio
-   
+
     const channel = await User.aggregate([
         {
             $match: {
@@ -431,7 +431,7 @@ const getUserChannelProfile = asyncHandler(async(req, res) => {
         new ApiResponse(200, channel[0], "User channel fetched successfully")
     )
 })
-
+   
 const getWatchHistory = asyncHandler(async(req, res) => {
     const user = await User.aggregate([
         {
