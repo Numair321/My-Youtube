@@ -30,6 +30,7 @@ const toggleSubscription = asyncHandler(async (req, res) => {
 });
 
 const getUserChannelSubscribers = asyncHandler(async (req, res) => {
+    //sbse pehle id find krengye aur check krengye ki wo channel id valid hai ki nahi uske baad hai ham subscription find krengye ki kitne haih hai 
     const { channelId } = req.params;
 
     if (!mongoose.isValidObjectId(channelId)) {
@@ -42,6 +43,7 @@ const getUserChannelSubscribers = asyncHandler(async (req, res) => {
 });
 
 const getSubscribedChannels = asyncHandler(async (req, res) => {
+    //ismein bhi sbse pehle channel id find krengye uske baad subscription meinfind krengye data ko
     const { subscriberId } = req.params;
 
     if (!mongoose.isValidObjectId(subscriberId)) {
